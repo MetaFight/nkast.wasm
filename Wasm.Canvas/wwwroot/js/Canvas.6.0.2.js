@@ -20,6 +20,14 @@
         var c = nkJSObject.GetObject(uid);
         c.height = Blazor.platform.readInt32Field(d, 0);
     },
+    GetStyle: function (uid) {
+        var c = nkJSObject.GetObject(uid);
+        return c.style;
+    },
+    SetStyle: function (uid, d) {
+        var c = nkJSObject.GetObject(uid);
+        c.style = Blazor.platform.readStringField(d, 0);
+    },
     Create2DContext: function (uid)
     {
         var c = nkJSObject.GetObject(uid);

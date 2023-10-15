@@ -19,6 +19,12 @@ namespace nkast.Wasm.Canvas
             set { Invoke("nkCanvas.SetHeight", value); }
         }
 
+        public string Style
+        {
+            get { return InvokeRet<string>("nkCanvas.GetStyle"); }
+            set { Invoke("nkCanvas.SetStyle", value); }
+        }
+
         CanvasRenderingContext _canvasRenderingContext;
         WebGL.WebGLRenderingContext _webglRenderingContext;
 

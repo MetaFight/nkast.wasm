@@ -927,4 +927,13 @@ window.nkCanvasGLContext =
         return gc.getError();
     },
 
+    GetStyle: function (uid) {
+        var c = nkJSObject.GetObject(uid);
+        return c.style;
+    },
+    SetStyle: function (uid, d) {
+        var c = nkJSObject.GetObject(uid);
+        c.style = Blazor.platform.readStringField(d, 0);
+    },
+
 };
